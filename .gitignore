@@ -1,0 +1,75 @@
+# ====================
+# Python & Environments
+# ====================
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+dist/
+build/
+.eggs/
+*.egg
+.Python
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Virtual Environments
+venv/
+ENV/
+env/
+.venv
+.ENV
+
+# ====================
+# Environment & Secrets
+# ====================
+.env
+.env.local
+.env.*.local
+secrets.py
+*.key
+*.pem
+
+# ====================
+# IDE & Editor Settings
+# ====================
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+*.sublime-project
+*.sublime-workspace
+
+# ====================
+# Testing & Coverage
+# ====================
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+.mypy_cache/
+.hypothesis/
+
+# ====================
+# Jupyter & Notebooks
+# ====================
+.ipynb_checkpoints/
+*.ipynb
+
+# ====================
+# Large Data & Results
+# ====================
+*.csv
+*.parquet
+
+# ====================
+# OS & Temporary Files
+# ====================
+*.tmp
+*.bak
+.AppleDouble
+.LSOverride
+.TemporaryItems

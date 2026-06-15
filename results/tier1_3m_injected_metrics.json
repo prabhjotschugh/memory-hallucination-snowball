@@ -1,0 +1,46 @@
+{
+  "experiment": "tier1_3m_injected",
+  "total_sessions": 3,
+  "detectability_decay": [
+    {
+      "session": 1,
+      "detection_rate": 1.0
+    },
+    {
+      "session": 2,
+      "detection_rate": 0.0
+    },
+    {
+      "session": 3,
+      "detection_rate": 0.0
+    }
+  ],
+  "cluster_growth": [
+    {
+      "session": 1,
+      "cluster_size": 2
+    },
+    {
+      "session": 2,
+      "cluster_size": 5
+    },
+    {
+      "session": 3,
+      "cluster_size": 10
+    }
+  ],
+  "point_of_no_return": 2,
+  "injector": {
+    "planned": 1,
+    "applied": 1,
+    "log": [
+      {
+        "session_id": 1,
+        "key": "what_is_the_fy2018_capital_expenditure_amount_in_usd_millio",
+        "true_value": "1577.00",
+        "injected_value": "1182.75",
+        "severity": "high"
+      }
+    ]
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "experiment": "tier1_3m_tool_failure",
+  "total_sessions": 3,
+  "detectability_decay": [
+    {
+      "session": 1,
+      "detection_rate": 1.0
+    },
+    {
+      "session": 2,
+      "detection_rate": 1.0
+    },
+    {
+      "session": 3,
+      "detection_rate": 1.0
+    }
+  ],
+  "cluster_growth": [
+    {
+      "session": 1,
+      "cluster_size": 0
+    },
+    {
+      "session": 2,
+      "cluster_size": 0
+    },
+    {
+      "session": 3,
+      "cluster_size": 0
+    }
+  ],
+  "point_of_no_return": null,
+  "injector": null
+}
