@@ -1,0 +1,552 @@
+{
+    "f17d18d1-66e3-4845-b1c9-3a31b3e4abe9": {
+        "entry_id": "f17d18d1-66e3-4845-b1c9-3a31b3e4abe9",
+        "session_id": 1,
+        "agent_source": "Researcher",
+        "content": "$50.0B",
+        "state_tag": "RAW_FACT",
+        "parent_ids": [],
+        "ground_truth_checkable": true,
+        "is_contaminated": true,
+        "verification_status": "FLAGGED_CONTAMINATED",
+        "injection_metadata": {
+            "type": "manual_override",
+            "original": "$50.0B",
+            "injected": "$50.0B",
+            "session": 1
+        }
+    },
+    "c1e02519-50ca-4e67-945a-4daf9b739353": {
+        "entry_id": "c1e02519-50ca-4e67-945a-4daf9b739353",
+        "session_id": 1,
+        "agent_source": "Analyst",
+        "content": "Quarter-over-quarter revenue growth: 4.17%",
+        "state_tag": "DERIVED",
+        "parent_ids": [
+            "f17d18d1-66e3-4845-b1c9-3a31b3e4abe9"
+        ],
+        "ground_truth_checkable": false,
+        "is_contaminated": true,
+        "verification_status": "FLAGGED_CONTAMINATED",
+        "injection_metadata": {
+            "type": "manual_override",
+            "original": "$50.0B",
+            "injected": "$50.0B",
+            "session": 1
+        }
+    },
+    "ba780db6-1e70-41ca-941f-da83ece19651": {
+        "entry_id": "ba780db6-1e70-41ca-941f-da83ece19651",
+        "session_id": 1,
+        "agent_source": "Writer/Reviewer",
+        "content": "The company posted 4.17% quarter-over-quarter revenue growth.",
+        "state_tag": "NARRATIVE",
+        "parent_ids": [
+            "c1e02519-50ca-4e67-945a-4daf9b739353"
+        ],
+        "ground_truth_checkable": false,
+        "is_contaminated": true,
+        "verification_status": "FLAGGED_CONTAMINATED",
+        "injection_metadata": {
+            "type": "manual_override",
+            "original": "$50.0B",
+            "injected": "$50.0B",
+            "session": 1
+        }
+    },
+    "9bc55726-cf7b-4978-83c4-4523ce945440": {
+        "entry_id": "9bc55726-cf7b-4978-83c4-4523ce945440",
+        "session_id": 2,
+        "agent_source": "Researcher",
+        "content": "$100.0B",
+        "state_tag": "RAW_FACT",
+        "parent_ids": [],
+        "ground_truth_checkable": true,
+        "is_contaminated": false,
+        "verification_status": "VERIFIED",
+        "injection_metadata": null
+    },
+    "f05b5419-5323-43ef-b4eb-613ad69136e9": {
+        "entry_id": "f05b5419-5323-43ef-b4eb-613ad69136e9",
+        "session_id": 2,
+        "agent_source": "Analyst",
+        "content": "Quarter-over-quarter revenue growth: 100.0%",
+        "state_tag": "DERIVED",
+        "parent_ids": [
+            "9bc55726-cf7b-4978-83c4-4523ce945440",
+            "f17d18d1-66e3-4845-b1c9-3a31b3e4abe9",
+            "c1e02519-50ca-4e67-945a-4daf9b739353",
+            "ba780db6-1e70-41ca-941f-da83ece19651"
+        ],
+        "ground_truth_checkable": false,
+        "is_contaminated": true,
+        "verification_status": "FLAGGED_CONTAMINATED",
+        "injection_metadata": null
+    },
+    "b5210690-bf04-4804-b2ec-b20f50b88a02": {
+        "entry_id": "b5210690-bf04-4804-b2ec-b20f50b88a02",
+        "session_id": 2,
+        "agent_source": "Writer/Reviewer",
+        "content": "Revenue doubled quarter-over-quarter, reflecting robust growth.",
+        "state_tag": "NARRATIVE",
+        "parent_ids": [
+            "f05b5419-5323-43ef-b4eb-613ad69136e9"
+        ],
+        "ground_truth_checkable": false,
+        "is_contaminated": true,
+        "verification_status": "FLAGGED_CONTAMINATED",
+        "injection_metadata": null
+    },
+    "fad44e2f-0765-4cca-9485-e5dfb4004146": {
+        "entry_id": "fad44e2f-0765-4cca-9485-e5dfb4004146",
+        "session_id": 3,
+        "agent_source": "Researcher",
+        "content": "$100.0B",
+        "state_tag": "RAW_FACT",
+        "parent_ids": [],
+        "ground_truth_checkable": true,
+        "is_contaminated": false,
+        "verification_status": "VERIFIED",
+        "injection_metadata": null
+    },
+    "995bc9df-a074-42c2-bb0b-3957d1665a52": {
+        "entry_id": "995bc9df-a074-42c2-bb0b-3957d1665a52",
+        "session_id": 3,
+        "agent_source": "Analyst",
+        "content": "Quarter-over-quarter revenue growth: 100.0%",
+        "state_tag": "DERIVED",
+        "parent_ids": [
+            "fad44e2f-0765-4cca-9485-e5dfb4004146",
+            "f17d18d1-66e3-4845-b1c9-3a31b3e4abe9",
+            "c1e02519-50ca-4e67-945a-4daf9b739353",
+            "ba780db6-1e70-41ca-941f-da83ece19651",
+            "9bc55726-cf7b-4978-83c4-4523ce945440",
+            "f05b5419-5323-43ef-b4eb-613ad69136e9",
+            "b5210690-bf04-4804-b2ec-b20f50b88a02"
+        ],
+        "ground_truth_checkable": false,
+        "is_contaminated": true,
+        "verification_status": "FLAGGED_CONTAMINATED",
+        "injection_metadata": null
+    },
+    "d074acf2-b994-4214-a2c2-121d14a01536": {
+        "entry_id": "d074acf2-b994-4214-a2c2-121d14a01536",
+        "session_id": 3,
+        "agent_source": "Writer/Reviewer",
+        "content": "Revenue doubled quarter-over-quarter, reflecting robust growth.",
+        "state_tag": "NARRATIVE",
+        "parent_ids": [
+            "995bc9df-a074-42c2-bb0b-3957d1665a52"
+        ],
+        "ground_truth_checkable": false,
+        "is_contaminated": true,
+        "verification_status": "FLAGGED_CONTAMINATED",
+        "injection_metadata": null
+    },
+    "98873f74-c473-43f8-8603-abcde29880fb": {
+        "entry_id": "98873f74-c473-43f8-8603-abcde29880fb",
+        "session_id": 4,
+        "agent_source": "Researcher",
+        "content": "$100.0B",
+        "state_tag": "RAW_FACT",
+        "parent_ids": [],
+        "ground_truth_checkable": true,
+        "is_contaminated": false,
+        "verification_status": "VERIFIED",
+        "injection_metadata": null
+    },
+    "5e8926f5-3aca-49b2-802e-472f44ed4360": {
+        "entry_id": "5e8926f5-3aca-49b2-802e-472f44ed4360",
+        "session_id": 4,
+        "agent_source": "Analyst",
+        "content": "Quarter-over-quarter revenue growth: 100.0%",
+        "state_tag": "DERIVED",
+        "parent_ids": [
+            "98873f74-c473-43f8-8603-abcde29880fb",
+            "f17d18d1-66e3-4845-b1c9-3a31b3e4abe9",
+            "c1e02519-50ca-4e67-945a-4daf9b739353",
+            "ba780db6-1e70-41ca-941f-da83ece19651",
+            "9bc55726-cf7b-4978-83c4-4523ce945440",
+            "f05b5419-5323-43ef-b4eb-613ad69136e9",
+            "b5210690-bf04-4804-b2ec-b20f50b88a02",
+            "fad44e2f-0765-4cca-9485-e5dfb4004146",
+            "995bc9df-a074-42c2-bb0b-3957d1665a52",
+            "d074acf2-b994-4214-a2c2-121d14a01536"
+        ],
+        "ground_truth_checkable": false,
+        "is_contaminated": true,
+        "verification_status": "FLAGGED_CONTAMINATED",
+        "injection_metadata": null
+    },
+    "9fc7bd68-0732-4e72-b30e-c488f9b19a16": {
+        "entry_id": "9fc7bd68-0732-4e72-b30e-c488f9b19a16",
+        "session_id": 4,
+        "agent_source": "Writer/Reviewer",
+        "content": "Revenue doubled quarter-over-quarter, reflecting robust growth.",
+        "state_tag": "NARRATIVE",
+        "parent_ids": [
+            "5e8926f5-3aca-49b2-802e-472f44ed4360"
+        ],
+        "ground_truth_checkable": false,
+        "is_contaminated": true,
+        "verification_status": "FLAGGED_CONTAMINATED",
+        "injection_metadata": null
+    },
+    "a0c0b904-db91-49e6-80b9-2fffed0434f3": {
+        "entry_id": "a0c0b904-db91-49e6-80b9-2fffed0434f3",
+        "session_id": 5,
+        "agent_source": "Researcher",
+        "content": "$100.0B",
+        "state_tag": "RAW_FACT",
+        "parent_ids": [],
+        "ground_truth_checkable": true,
+        "is_contaminated": false,
+        "verification_status": "VERIFIED",
+        "injection_metadata": null
+    },
+    "ea3a7f53-1bb9-4b78-84ec-992ae266ba0d": {
+        "entry_id": "ea3a7f53-1bb9-4b78-84ec-992ae266ba0d",
+        "session_id": 5,
+        "agent_source": "Analyst",
+        "content": "Quarter-over-quarter revenue growth: 0.0%",
+        "state_tag": "DERIVED",
+        "parent_ids": [
+            "a0c0b904-db91-49e6-80b9-2fffed0434f3",
+            "f17d18d1-66e3-4845-b1c9-3a31b3e4abe9",
+            "c1e02519-50ca-4e67-945a-4daf9b739353",
+            "ba780db6-1e70-41ca-941f-da83ece19651",
+            "9bc55726-cf7b-4978-83c4-4523ce945440",
+            "f05b5419-5323-43ef-b4eb-613ad69136e9",
+            "b5210690-bf04-4804-b2ec-b20f50b88a02",
+            "fad44e2f-0765-4cca-9485-e5dfb4004146",
+            "995bc9df-a074-42c2-bb0b-3957d1665a52",
+            "d074acf2-b994-4214-a2c2-121d14a01536",
+            "98873f74-c473-43f8-8603-abcde29880fb",
+            "5e8926f5-3aca-49b2-802e-472f44ed4360",
+            "9fc7bd68-0732-4e72-b30e-c488f9b19a16"
+        ],
+        "ground_truth_checkable": false,
+        "is_contaminated": true,
+        "verification_status": "FLAGGED_CONTAMINATED",
+        "injection_metadata": null
+    },
+    "598f3200-f964-4d7c-80e5-20e98eba2542": {
+        "entry_id": "598f3200-f964-4d7c-80e5-20e98eba2542",
+        "session_id": 5,
+        "agent_source": "Writer/Reviewer",
+        "content": "Quarter-over-quarter, revenue remained flat, posting 0.0% growth.",
+        "state_tag": "NARRATIVE",
+        "parent_ids": [
+            "ea3a7f53-1bb9-4b78-84ec-992ae266ba0d"
+        ],
+        "ground_truth_checkable": false,
+        "is_contaminated": true,
+        "verification_status": "FLAGGED_CONTAMINATED",
+        "injection_metadata": null
+    },
+    "e0f571be-a9cd-411f-8851-b2acd397b982": {
+        "entry_id": "e0f571be-a9cd-411f-8851-b2acd397b982",
+        "session_id": 6,
+        "agent_source": "Researcher",
+        "content": "$100.0B",
+        "state_tag": "RAW_FACT",
+        "parent_ids": [],
+        "ground_truth_checkable": true,
+        "is_contaminated": false,
+        "verification_status": "VERIFIED",
+        "injection_metadata": null
+    },
+    "1666e5c9-13bf-4413-80ba-053eca0280e2": {
+        "entry_id": "1666e5c9-13bf-4413-80ba-053eca0280e2",
+        "session_id": 6,
+        "agent_source": "Analyst",
+        "content": "Quarter-over-quarter revenue growth: 0.0%",
+        "state_tag": "DERIVED",
+        "parent_ids": [
+            "e0f571be-a9cd-411f-8851-b2acd397b982",
+            "f17d18d1-66e3-4845-b1c9-3a31b3e4abe9",
+            "c1e02519-50ca-4e67-945a-4daf9b739353",
+            "ba780db6-1e70-41ca-941f-da83ece19651",
+            "9bc55726-cf7b-4978-83c4-4523ce945440",
+            "f05b5419-5323-43ef-b4eb-613ad69136e9",
+            "b5210690-bf04-4804-b2ec-b20f50b88a02",
+            "fad44e2f-0765-4cca-9485-e5dfb4004146",
+            "995bc9df-a074-42c2-bb0b-3957d1665a52",
+            "d074acf2-b994-4214-a2c2-121d14a01536",
+            "98873f74-c473-43f8-8603-abcde29880fb",
+            "5e8926f5-3aca-49b2-802e-472f44ed4360",
+            "9fc7bd68-0732-4e72-b30e-c488f9b19a16",
+            "a0c0b904-db91-49e6-80b9-2fffed0434f3",
+            "ea3a7f53-1bb9-4b78-84ec-992ae266ba0d",
+            "598f3200-f964-4d7c-80e5-20e98eba2542"
+        ],
+        "ground_truth_checkable": false,
+        "is_contaminated": true,
+        "verification_status": "FLAGGED_CONTAMINATED",
+        "injection_metadata": null
+    },
+    "78bdfa18-03d9-4cdc-b7bf-6a6bb90643cf": {
+        "entry_id": "78bdfa18-03d9-4cdc-b7bf-6a6bb90643cf",
+        "session_id": 6,
+        "agent_source": "Writer/Reviewer",
+        "content": "Quarter-over-quarter, revenue remained flat, posting 0.0% growth.",
+        "state_tag": "NARRATIVE",
+        "parent_ids": [
+            "1666e5c9-13bf-4413-80ba-053eca0280e2"
+        ],
+        "ground_truth_checkable": false,
+        "is_contaminated": true,
+        "verification_status": "FLAGGED_CONTAMINATED",
+        "injection_metadata": null
+    },
+    "298d1cb5-4904-46c5-9696-5b897ade755d": {
+        "entry_id": "298d1cb5-4904-46c5-9696-5b897ade755d",
+        "session_id": 7,
+        "agent_source": "Researcher",
+        "content": "$100.0B",
+        "state_tag": "RAW_FACT",
+        "parent_ids": [],
+        "ground_truth_checkable": true,
+        "is_contaminated": false,
+        "verification_status": "VERIFIED",
+        "injection_metadata": null
+    },
+    "106b8c82-9ae7-4dd2-8115-4db5ecfb954c": {
+        "entry_id": "106b8c82-9ae7-4dd2-8115-4db5ecfb954c",
+        "session_id": 7,
+        "agent_source": "Analyst",
+        "content": "Quarter-over-quarter revenue growth: 0.0%",
+        "state_tag": "DERIVED",
+        "parent_ids": [
+            "298d1cb5-4904-46c5-9696-5b897ade755d",
+            "f17d18d1-66e3-4845-b1c9-3a31b3e4abe9",
+            "c1e02519-50ca-4e67-945a-4daf9b739353",
+            "ba780db6-1e70-41ca-941f-da83ece19651",
+            "9bc55726-cf7b-4978-83c4-4523ce945440",
+            "f05b5419-5323-43ef-b4eb-613ad69136e9",
+            "b5210690-bf04-4804-b2ec-b20f50b88a02",
+            "fad44e2f-0765-4cca-9485-e5dfb4004146",
+            "995bc9df-a074-42c2-bb0b-3957d1665a52",
+            "d074acf2-b994-4214-a2c2-121d14a01536",
+            "98873f74-c473-43f8-8603-abcde29880fb",
+            "5e8926f5-3aca-49b2-802e-472f44ed4360",
+            "9fc7bd68-0732-4e72-b30e-c488f9b19a16",
+            "a0c0b904-db91-49e6-80b9-2fffed0434f3",
+            "ea3a7f53-1bb9-4b78-84ec-992ae266ba0d",
+            "598f3200-f964-4d7c-80e5-20e98eba2542",
+            "e0f571be-a9cd-411f-8851-b2acd397b982",
+            "1666e5c9-13bf-4413-80ba-053eca0280e2",
+            "78bdfa18-03d9-4cdc-b7bf-6a6bb90643cf"
+        ],
+        "ground_truth_checkable": false,
+        "is_contaminated": true,
+        "verification_status": "FLAGGED_CONTAMINATED",
+        "injection_metadata": null
+    },
+    "31139852-29e3-4950-974c-4e62bd704c38": {
+        "entry_id": "31139852-29e3-4950-974c-4e62bd704c38",
+        "session_id": 7,
+        "agent_source": "Writer/Reviewer",
+        "content": "Quarter-over-quarter, revenue remained flat, posting 0.0% growth.",
+        "state_tag": "NARRATIVE",
+        "parent_ids": [
+            "106b8c82-9ae7-4dd2-8115-4db5ecfb954c"
+        ],
+        "ground_truth_checkable": false,
+        "is_contaminated": true,
+        "verification_status": "FLAGGED_CONTAMINATED",
+        "injection_metadata": null
+    },
+    "eb4c0675-b71a-45df-8e87-d365ca01ad33": {
+        "entry_id": "eb4c0675-b71a-45df-8e87-d365ca01ad33",
+        "session_id": 8,
+        "agent_source": "Researcher",
+        "content": "$100.0B",
+        "state_tag": "RAW_FACT",
+        "parent_ids": [],
+        "ground_truth_checkable": true,
+        "is_contaminated": false,
+        "verification_status": "VERIFIED",
+        "injection_metadata": null
+    },
+    "12ec61d2-ce8f-4a34-a432-3edc9e8fc11a": {
+        "entry_id": "12ec61d2-ce8f-4a34-a432-3edc9e8fc11a",
+        "session_id": 8,
+        "agent_source": "Analyst",
+        "content": "Quarter-over-quarter revenue growth: 0.0%",
+        "state_tag": "DERIVED",
+        "parent_ids": [
+            "eb4c0675-b71a-45df-8e87-d365ca01ad33",
+            "f17d18d1-66e3-4845-b1c9-3a31b3e4abe9",
+            "c1e02519-50ca-4e67-945a-4daf9b739353",
+            "ba780db6-1e70-41ca-941f-da83ece19651",
+            "9bc55726-cf7b-4978-83c4-4523ce945440",
+            "f05b5419-5323-43ef-b4eb-613ad69136e9",
+            "b5210690-bf04-4804-b2ec-b20f50b88a02",
+            "fad44e2f-0765-4cca-9485-e5dfb4004146",
+            "995bc9df-a074-42c2-bb0b-3957d1665a52",
+            "d074acf2-b994-4214-a2c2-121d14a01536",
+            "98873f74-c473-43f8-8603-abcde29880fb",
+            "5e8926f5-3aca-49b2-802e-472f44ed4360",
+            "9fc7bd68-0732-4e72-b30e-c488f9b19a16",
+            "a0c0b904-db91-49e6-80b9-2fffed0434f3",
+            "ea3a7f53-1bb9-4b78-84ec-992ae266ba0d",
+            "598f3200-f964-4d7c-80e5-20e98eba2542",
+            "e0f571be-a9cd-411f-8851-b2acd397b982",
+            "1666e5c9-13bf-4413-80ba-053eca0280e2",
+            "78bdfa18-03d9-4cdc-b7bf-6a6bb90643cf",
+            "298d1cb5-4904-46c5-9696-5b897ade755d",
+            "106b8c82-9ae7-4dd2-8115-4db5ecfb954c",
+            "31139852-29e3-4950-974c-4e62bd704c38"
+        ],
+        "ground_truth_checkable": false,
+        "is_contaminated": true,
+        "verification_status": "FLAGGED_CONTAMINATED",
+        "injection_metadata": null
+    },
+    "0fe8980d-f3af-482d-a735-dfaae3c64547": {
+        "entry_id": "0fe8980d-f3af-482d-a735-dfaae3c64547",
+        "session_id": 8,
+        "agent_source": "Writer/Reviewer",
+        "content": "Quarter-over-quarter revenue growth was flat at 0.0%.",
+        "state_tag": "NARRATIVE",
+        "parent_ids": [
+            "12ec61d2-ce8f-4a34-a432-3edc9e8fc11a"
+        ],
+        "ground_truth_checkable": false,
+        "is_contaminated": true,
+        "verification_status": "FLAGGED_CONTAMINATED",
+        "injection_metadata": null
+    },
+    "ea5ba242-75fb-4a38-b835-0d7ef0cdebf8": {
+        "entry_id": "ea5ba242-75fb-4a38-b835-0d7ef0cdebf8",
+        "session_id": 9,
+        "agent_source": "Researcher",
+        "content": "$100.0B",
+        "state_tag": "RAW_FACT",
+        "parent_ids": [],
+        "ground_truth_checkable": true,
+        "is_contaminated": false,
+        "verification_status": "VERIFIED",
+        "injection_metadata": null
+    },
+    "3208d11c-9b00-4a68-92f8-7bf129da42b1": {
+        "entry_id": "3208d11c-9b00-4a68-92f8-7bf129da42b1",
+        "session_id": 9,
+        "agent_source": "Analyst",
+        "content": "Quarter-over-quarter revenue growth: 0.0%",
+        "state_tag": "DERIVED",
+        "parent_ids": [
+            "ea5ba242-75fb-4a38-b835-0d7ef0cdebf8",
+            "f17d18d1-66e3-4845-b1c9-3a31b3e4abe9",
+            "c1e02519-50ca-4e67-945a-4daf9b739353",
+            "ba780db6-1e70-41ca-941f-da83ece19651",
+            "9bc55726-cf7b-4978-83c4-4523ce945440",
+            "f05b5419-5323-43ef-b4eb-613ad69136e9",
+            "b5210690-bf04-4804-b2ec-b20f50b88a02",
+            "fad44e2f-0765-4cca-9485-e5dfb4004146",
+            "995bc9df-a074-42c2-bb0b-3957d1665a52",
+            "d074acf2-b994-4214-a2c2-121d14a01536",
+            "98873f74-c473-43f8-8603-abcde29880fb",
+            "5e8926f5-3aca-49b2-802e-472f44ed4360",
+            "9fc7bd68-0732-4e72-b30e-c488f9b19a16",
+            "a0c0b904-db91-49e6-80b9-2fffed0434f3",
+            "ea3a7f53-1bb9-4b78-84ec-992ae266ba0d",
+            "598f3200-f964-4d7c-80e5-20e98eba2542",
+            "e0f571be-a9cd-411f-8851-b2acd397b982",
+            "1666e5c9-13bf-4413-80ba-053eca0280e2",
+            "78bdfa18-03d9-4cdc-b7bf-6a6bb90643cf",
+            "298d1cb5-4904-46c5-9696-5b897ade755d",
+            "106b8c82-9ae7-4dd2-8115-4db5ecfb954c",
+            "31139852-29e3-4950-974c-4e62bd704c38",
+            "eb4c0675-b71a-45df-8e87-d365ca01ad33",
+            "12ec61d2-ce8f-4a34-a432-3edc9e8fc11a",
+            "0fe8980d-f3af-482d-a735-dfaae3c64547"
+        ],
+        "ground_truth_checkable": false,
+        "is_contaminated": true,
+        "verification_status": "FLAGGED_CONTAMINATED",
+        "injection_metadata": null
+    },
+    "f1932184-d4cf-4a3f-9a42-2b632e3db542": {
+        "entry_id": "f1932184-d4cf-4a3f-9a42-2b632e3db542",
+        "session_id": 9,
+        "agent_source": "Writer/Reviewer",
+        "content": "Quarter-over-quarter revenue growth was flat at 0.0%.",
+        "state_tag": "NARRATIVE",
+        "parent_ids": [
+            "3208d11c-9b00-4a68-92f8-7bf129da42b1"
+        ],
+        "ground_truth_checkable": false,
+        "is_contaminated": true,
+        "verification_status": "FLAGGED_CONTAMINATED",
+        "injection_metadata": null
+    },
+    "2d2b7f8a-1a42-435d-8d12-2496cbdb2d0c": {
+        "entry_id": "2d2b7f8a-1a42-435d-8d12-2496cbdb2d0c",
+        "session_id": 10,
+        "agent_source": "Researcher",
+        "content": "$100.0B",
+        "state_tag": "RAW_FACT",
+        "parent_ids": [],
+        "ground_truth_checkable": true,
+        "is_contaminated": false,
+        "verification_status": "VERIFIED",
+        "injection_metadata": null
+    },
+    "b3399aef-7e04-422c-a280-0a5e836d1acd": {
+        "entry_id": "b3399aef-7e04-422c-a280-0a5e836d1acd",
+        "session_id": 10,
+        "agent_source": "Analyst",
+        "content": "Quarter-over-quarter revenue growth: 0.0%",
+        "state_tag": "DERIVED",
+        "parent_ids": [
+            "2d2b7f8a-1a42-435d-8d12-2496cbdb2d0c",
+            "f17d18d1-66e3-4845-b1c9-3a31b3e4abe9",
+            "c1e02519-50ca-4e67-945a-4daf9b739353",
+            "ba780db6-1e70-41ca-941f-da83ece19651",
+            "9bc55726-cf7b-4978-83c4-4523ce945440",
+            "f05b5419-5323-43ef-b4eb-613ad69136e9",
+            "b5210690-bf04-4804-b2ec-b20f50b88a02",
+            "fad44e2f-0765-4cca-9485-e5dfb4004146",
+            "995bc9df-a074-42c2-bb0b-3957d1665a52",
+            "d074acf2-b994-4214-a2c2-121d14a01536",
+            "98873f74-c473-43f8-8603-abcde29880fb",
+            "5e8926f5-3aca-49b2-802e-472f44ed4360",
+            "9fc7bd68-0732-4e72-b30e-c488f9b19a16",
+            "a0c0b904-db91-49e6-80b9-2fffed0434f3",
+            "ea3a7f53-1bb9-4b78-84ec-992ae266ba0d",
+            "598f3200-f964-4d7c-80e5-20e98eba2542",
+            "e0f571be-a9cd-411f-8851-b2acd397b982",
+            "1666e5c9-13bf-4413-80ba-053eca0280e2",
+            "78bdfa18-03d9-4cdc-b7bf-6a6bb90643cf",
+            "298d1cb5-4904-46c5-9696-5b897ade755d",
+            "106b8c82-9ae7-4dd2-8115-4db5ecfb954c",
+            "31139852-29e3-4950-974c-4e62bd704c38",
+            "eb4c0675-b71a-45df-8e87-d365ca01ad33",
+            "12ec61d2-ce8f-4a34-a432-3edc9e8fc11a",
+            "0fe8980d-f3af-482d-a735-dfaae3c64547",
+            "ea5ba242-75fb-4a38-b835-0d7ef0cdebf8",
+            "3208d11c-9b00-4a68-92f8-7bf129da42b1",
+            "f1932184-d4cf-4a3f-9a42-2b632e3db542"
+        ],
+        "ground_truth_checkable": false,
+        "is_contaminated": true,
+        "verification_status": "FLAGGED_CONTAMINATED",
+        "injection_metadata": null
+    },
+    "f5be6dcd-93d9-4711-a17b-6c71fc7f95e8": {
+        "entry_id": "f5be6dcd-93d9-4711-a17b-6c71fc7f95e8",
+        "session_id": 10,
+        "agent_source": "Writer/Reviewer",
+        "content": "Quarter-over-quarter revenue growth was flat at 0.0%.",
+        "state_tag": "NARRATIVE",
+        "parent_ids": [
+            "b3399aef-7e04-422c-a280-0a5e836d1acd"
+        ],
+        "ground_truth_checkable": false,
+        "is_contaminated": true,
+        "verification_status": "FLAGGED_CONTAMINATED",
+        "injection_metadata": null
+    }
+}

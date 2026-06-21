@@ -12,7 +12,7 @@ def test_pipeline_phase5_cross_session_snowball():
     print("\n--- Starting Phase 5 Test: Cross-Session Memory Snowball ---")
     
     # Use the main memory_db.json file for this test so the user can easily open it and look at it!
-    db_path = "memory_db.json"
+    db_path = "memory_phase5_db.json"
     if os.path.exists(db_path):
         os.remove(db_path) # Clear it out before the test starts so it's fresh
         
