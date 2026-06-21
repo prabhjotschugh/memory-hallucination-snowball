@@ -10,8 +10,13 @@ from pipeline import MemoryCurator, Pipeline
 def test_pipeline_phase4():
     print("\n--- Starting Phase 4 Test: Full 5-Agent Pipeline ---")
     
+    # Use a temporary db file for the test
+    test_db_path = "test_phase4_db.json"
+    if os.path.exists(test_db_path):
+        os.remove(test_db_path)
+        
     # Initialize infrastructure
-    store = MemoryStore()
+    store = MemoryStore(db_path=test_db_path)
     curator = MemoryCurator(store)
     
     # Initialize agents

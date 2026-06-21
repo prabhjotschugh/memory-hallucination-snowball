@@ -1,0 +1,100 @@
+{
+    "f4b9fbd4-5967-4383-addb-92d3c347cec0": {
+        "entry_id": "f4b9fbd4-5967-4383-addb-92d3c347cec0",
+        "session_id": 1,
+        "agent_source": "Researcher",
+        "content": "$50.0B",
+        "state_tag": "RAW_FACT",
+        "parent_ids": [],
+        "ground_truth_checkable": true,
+        "is_contaminated": true,
+        "verification_status": "FLAGGED_CONTAMINATED",
+        "injection_metadata": {
+            "type": "manual_override",
+            "original": "$50.0B",
+            "injected": "$50.0B",
+            "session": 1
+        }
+    },
+    "bef86da9-b364-448c-b0a6-ae360289c227": {
+        "entry_id": "bef86da9-b364-448c-b0a6-ae360289c227",
+        "session_id": 1,
+        "agent_source": "Analyst",
+        "content": "Quarter-over-Quarter growth: -37.5%",
+        "state_tag": "DERIVED",
+        "parent_ids": [
+            "f4b9fbd4-5967-4383-addb-92d3c347cec0"
+        ],
+        "ground_truth_checkable": false,
+        "is_contaminated": true,
+        "verification_status": "FLAGGED_CONTAMINATED",
+        "injection_metadata": {
+            "type": "manual_override",
+            "original": "$50.0B",
+            "injected": "$50.0B",
+            "session": 1
+        }
+    },
+    "610b4ab0-898c-45a7-98f8-f371c77118f4": {
+        "entry_id": "610b4ab0-898c-45a7-98f8-f371c77118f4",
+        "session_id": 1,
+        "agent_source": "Writer/Reviewer",
+        "content": "Quarter-over-quarter growth contracted by 37.5%.",
+        "state_tag": "NARRATIVE",
+        "parent_ids": [
+            "bef86da9-b364-448c-b0a6-ae360289c227"
+        ],
+        "ground_truth_checkable": false,
+        "is_contaminated": true,
+        "verification_status": "FLAGGED_CONTAMINATED",
+        "injection_metadata": {
+            "type": "manual_override",
+            "original": "$50.0B",
+            "injected": "$50.0B",
+            "session": 1
+        }
+    },
+    "25193f73-1a92-4a96-b930-d442c7ef1ff2": {
+        "entry_id": "25193f73-1a92-4a96-b930-d442c7ef1ff2",
+        "session_id": 2,
+        "agent_source": "Researcher",
+        "content": "$100.0B",
+        "state_tag": "RAW_FACT",
+        "parent_ids": [],
+        "ground_truth_checkable": true,
+        "is_contaminated": false,
+        "verification_status": "VERIFIED",
+        "injection_metadata": null
+    },
+    "3fc3d53d-50ec-4e1a-a4de-3b83f184fed6": {
+        "entry_id": "3fc3d53d-50ec-4e1a-a4de-3b83f184fed6",
+        "session_id": 2,
+        "agent_source": "Analyst",
+        "content": "Quarter-over-Quarter growth (Q1 to Q2): 100.0%",
+        "state_tag": "DERIVED",
+        "parent_ids": [
+            "25193f73-1a92-4a96-b930-d442c7ef1ff2",
+            "f4b9fbd4-5967-4383-addb-92d3c347cec0",
+            "bef86da9-b364-448c-b0a6-ae360289c227",
+            "610b4ab0-898c-45a7-98f8-f371c77118f4"
+        ],
+        "ground_truth_checkable": false,
+        "is_contaminated": true,
+        "verification_status": "FLAGGED_CONTAMINATED",
+        "injection_metadata": null
+    },
+    "c695a366-c504-4916-92cf-72148eb90dec": {
+        "entry_id": "c695a366-c504-4916-92cf-72148eb90dec",
+        "session_id": 2,
+        "agent_source": "Writer/Reviewer",
+        "content": "The company achieved 100.0% quarter-over-quarter growth from Q1 to Q2, doubling its performance.",
+        "state_tag": "NARRATIVE",
+        "parent_ids": [
+            "3fc3d53d-50ec-4e1a-a4de-3b83f184fed6"
+        ],
+        "ground_truth_checkable": false,
+        "is_contaminated": true,
+        "verification_status": "FLAGGED_CONTAMINATED",
+        "injection_metadata": null
+    }
+}

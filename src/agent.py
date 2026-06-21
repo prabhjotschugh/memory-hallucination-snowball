@@ -11,8 +11,9 @@ class Researcher:
         self.model_name = model_name
         self.system_instruction = "You are a financial researcher. Extract the exact figure requested from the source text. Keep your answer brief and include the number."
         
-    def extract_figure(self, source_text: str, question: str) -> str:
-        prompt = f"Source text:\n{source_text}\n\nQuestion:\n{question}\n\nExtract the exact number. Be concise."
+    def extract_figure(self, source_text: str, question: str, memory_context: str = "") -> str:
+        memory_prompt = f"Historical Memory:\n{memory_context}\n\n" if memory_context else ""
+        prompt = f"{memory_prompt}Source text:\n{source_text}\n\nQuestion:\n{question}\n\nExtract the exact number. Be concise."
         
         response = self.client.models.generate_content(
             model=self.model_name,
@@ -28,10 +29,11 @@ class Analyst:
     def __init__(self, model_name="gemini-2.5-flash"):
         self.client = genai.Client()
         self.model_name = model_name
-        self.system_instruction = "You are a financial analyst. Calculate derived metrics based on the provided data. Keep your answer brief and include the derived number."
+        self.system_instruction = "You are a financial analyst. Calculate derived metrics based on the provided data and historical memory. Keep your answer brief and include the derived number."
         
-    def derive_insight(self, raw_fact: str, context: str) -> str:
-        prompt = f"Background Context:\n{context}\n\nGiven this raw fact:\n{raw_fact}\n\nProvide a derived insight (e.g., Year-over-Year growth, margin percentage). Be concise and state the derived number clearly."
+    def derive_insight(self, raw_fact: str, context: str, memory_context: str = "") -> str:
+        memory_prompt = f"Historical Memory:\n{memory_context}\n\n" if memory_context else ""
+        prompt = f"{memory_prompt}Background Context:\n{context}\n\nGiven this raw fact:\n{raw_fact}\n\nProvide a derived insight (e.g., Year-over-Year growth, margin percentage). Be concise and state the derived number clearly. Rely on the historical memory if historical baseline figures are needed to calculate the derivation."
         response = self.client.models.generate_content(
             model=self.model_name,
             contents=prompt,

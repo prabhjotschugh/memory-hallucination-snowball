@@ -19,7 +19,8 @@ class MemoryCurator:
         derived_insight: str, 
         final_narrative: str, 
         ground_truth: float,
-        injection_metadata: Dict[str, Any] = None
+        injection_metadata: Dict[str, Any] = None,
+        prior_memories: list = None
     ) -> Tuple[MemoryEntry, MemoryEntry, MemoryEntry]:
         """
         Commits the 3 stages of the pipeline to memory, running the contamination gate on each.
@@ -51,17 +52,23 @@ class MemoryCurator:
         matches_gt_derived = not check_numeric_contamination(derived_insight, ground_truth)
         
         # A derived metric is contaminated if its parent was contaminated (the snowball effect).
-        is_derived_contam = is_raw_contam 
+        # It also inherits contamination from any prior historical memories it used.
+        is_prior_contam = any(m.is_contaminated for m in prior_memories) if prior_memories else False
+        is_derived_contam = is_raw_contam or is_prior_contam
         
         derived_status = VerificationStatus.FLAGGED_CONTAMINATED if is_derived_contam else (VerificationStatus.VERIFIED if matches_gt_derived else VerificationStatus.UNVERIFIED)
         
+        derived_parent_ids = [entry_raw.entry_id]
+        if prior_memories:
+            derived_parent_ids.extend([m.entry_id for m in prior_memories])
+
         entry_derived = MemoryEntry(
             entry_id=str(uuid.uuid4()),
             session_id=session_id,
             agent_source="Analyst",
             content=derived_insight,
             state_tag=StateTag.DERIVED,
-            parent_ids=[entry_raw.entry_id],
+            parent_ids=derived_parent_ids,
             ground_truth_checkable=matches_gt_derived,
             is_contaminated=is_derived_contam,
             verification_status=derived_status,
@@ -114,18 +121,22 @@ class Pipeline:
         injected_researcher_override: str = None
     ) -> Tuple[MemoryEntry, MemoryEntry, MemoryEntry]:
         
+        # Pull Historical Memory
+        prior_memories = self.curator.store.retrieve_memory(session_id)
+        memory_context = "\n".join([f"- {m.content}" for m in prior_memories]) if prior_memories else ""
+        
         # 1. Researcher Stage
-        raw_fact = self.researcher.extract_figure(source_text, question)
+        raw_fact = self.researcher.extract_figure(source_text, question, memory_context)
         
         # [INJECTION POINT for experimental control]
         if injected_researcher_override is not None:
             raw_fact = injected_researcher_override
-            injection_meta = {"type": "manual_override", "original": raw_fact, "injected": injected_researcher_override}
+            injection_meta = {"type": "manual_override", "original": raw_fact, "injected": injected_researcher_override, "session": session_id}
         else:
             injection_meta = None
 
         # 2. Analyst Stage
-        derived_insight = self.analyst.derive_insight(raw_fact, analyst_context)
+        derived_insight = self.analyst.derive_insight(raw_fact, analyst_context, memory_context)
 
         # 3. Writer Stage
         draft_narrative = self.writer.draft_narrative(derived_insight)
@@ -140,7 +151,8 @@ class Pipeline:
             derived_insight=derived_insight,
             final_narrative=final_narrative,
             ground_truth=ground_truth,
-            injection_metadata=injection_meta
+            injection_metadata=injection_meta,
+            prior_memories=prior_memories
         )
 
         return entries

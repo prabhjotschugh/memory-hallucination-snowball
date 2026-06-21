@@ -7,7 +7,12 @@ sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '../s
 from memory import MemoryEntry, MemoryStore, StateTag, VerificationStatus
 
 def test_lineage_vs_contamination_isolation():
-    store = MemoryStore()
+    # Use a temporary db file for the test so we don't pollute the real one
+    test_db_path = "test_memory_db.json"
+    if os.path.exists(test_db_path):
+        os.remove(test_db_path)
+        
+    store = MemoryStore(db_path=test_db_path)
     
     print("\n--- Starting Phase 1 Test: Lineage vs Contamination Isolation ---")
     
