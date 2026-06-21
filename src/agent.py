@@ -7,7 +7,7 @@ load_dotenv()
 
 class Researcher:
     def __init__(self, model_name="gemini-2.5-flash"):
-        self.client = genai.Client() # Automatically picks up GEMINI_API_KEY from environment
+        self.client = genai.Client()
         self.model_name = model_name
         self.system_instruction = "You are a financial researcher. Extract the exact figure requested from the source text. Keep your answer brief and include the number."
         
@@ -19,6 +19,61 @@ class Researcher:
             contents=prompt,
             config=types.GenerateContentConfig(
                 system_instruction=self.system_instruction,
+                temperature=0.0
+            )
+        )
+        return response.text
+
+class Analyst:
+    def __init__(self, model_name="gemini-2.5-flash"):
+        self.client = genai.Client()
+        self.model_name = model_name
+        self.system_instruction = "You are a financial analyst. Calculate derived metrics based on the provided data. Keep your answer brief and include the derived number."
+        
+    def derive_insight(self, raw_fact: str, context: str) -> str:
+        prompt = f"Background Context:\n{context}\n\nGiven this raw fact:\n{raw_fact}\n\nProvide a derived insight (e.g., Year-over-Year growth, margin percentage). Be concise and state the derived number clearly."
+        response = self.client.models.generate_content(
+            model=self.model_name,
+            contents=prompt,
+            config=types.GenerateContentConfig(
+                system_instruction=self.system_instruction,
+                temperature=0.0
+            )
+        )
+        return response.text
+
+class Writer:
+    def __init__(self, model_name="gemini-2.5-flash"):
+        self.client = genai.Client()
+        self.model_name = model_name
+        self.system_instruction = "You are a financial writer. Draft a concise narrative sentence incorporating the provided insight."
+        
+    def draft_narrative(self, derived_insight: str) -> str:
+        prompt = f"Insight:\n{derived_insight}\n\nDraft a single, professional narrative sentence for an earnings report that includes this insight."
+        response = self.client.models.generate_content(
+            model=self.model_name,
+            contents=prompt,
+            config=types.GenerateContentConfig(
+                system_instruction=self.system_instruction,
+                temperature=0.0
+            )
+        )
+        return response.text
+
+class Reviewer:
+    def __init__(self, model_name="gemini-2.5-flash"):
+        self.client = genai.Client()
+        self.model_name = model_name
+        self.system_instruction = "You are an internal reviewer. Check the narrative for grammatical consistency and professional tone. Do NOT verify the numbers against source documents. Just output the approved sentence."
+        
+    def review(self, narrative: str) -> str:
+        prompt = f"Narrative to review:\n{narrative}\n\nReview this for professional tone. Return the final polished sentence. Do not add conversational filler."
+        response = self.client.models.generate_content(
+            model=self.model_name,
+            contents=prompt,
+            config=types.GenerateContentConfig(
+                system_instruction=self.system_instruction,
+                temperature=0.0
             )
         )
         return response.text
