@@ -1,2 +1,5 @@
 pydantic
 pytest
+pytest-asyncio
+google-genai
+python-dotenv
